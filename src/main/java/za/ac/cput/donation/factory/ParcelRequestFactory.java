@@ -1,6 +1,6 @@
 package za.ac.cput.donation.factory;
 
-import za.ac.cput.donation.entity.ParcelRequest;
+import za.ac.cput.donation.domain.ParcelRequest;
 import za.ac.cput.donation.util.Helper;
 
 public class ParcelRequestFactory {

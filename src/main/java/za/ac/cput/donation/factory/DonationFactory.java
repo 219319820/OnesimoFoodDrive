@@ -1,6 +1,6 @@
 package za.ac.cput.donation.factory;
 
-import za.ac.cput.donation.entity.Donation;
+import za.ac.cput.donation.domain.Donation;
 import za.ac.cput.donation.util.Helper;
 
 public class DonationFactory {

@@ -1,18 +1,21 @@
-package za.ac.cput.donation.entity;
+package za.ac.cput.donation.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.io.Serializable;
 
 @Entity
-public class Donor extends User implements Serializable {
+public class Student extends User implements Serializable {
+    private boolean isFunded;
 
-    public Donor() {}
-    private Donor(Builder builder){
+    public Student() {}
+
+    private Student(Builder builder){
         super();
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.email = builder.email;
         this.password = builder.password;
+        this.isFunded = builder.isFunded;
         if(builder.id != 0){
             this.id = builder.id;
         }
@@ -21,6 +24,7 @@ public class Donor extends User implements Serializable {
     public static class Builder{
         private long id;
         private String firstName, lastName, email, password;
+        private boolean isFunded;
 
         public Builder setFirstName(String firstName){
             this.firstName = firstName;
@@ -42,24 +46,35 @@ public class Donor extends User implements Serializable {
             return this;
         }
 
-        public Builder copy(Donor donor){
-            this.id = donor.getId();
-            this.firstName = donor.firstName;
-            this.lastName = donor.lastName;
-            this.email = donor.email;
-            this.password = donor.password;
+        public Builder setIsFunded(boolean isFunded){
+            this.isFunded = isFunded;
             return this;
         }
 
-        public Donor build(){
-            return new Donor(this);
+        public Builder copy(Student student){
+            this.id = student.getId();
+            this.firstName = student.firstName;
+            this.lastName = student.lastName;
+            this.email = student.email;
+            this.password = student.password;
+            this.isFunded = student.isFunded;
+            return this;
         }
+
+        public Student build(){
+            return new Student(this);
+        }
+    }
+
+    public boolean isFunded() {
+        return isFunded;
     }
 
     @Override
     public String toString() {
-        return "Donor{" +
-                "id=" + id +
+        return "Student{" +
+                "isFunded=" + isFunded +
+                ", id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

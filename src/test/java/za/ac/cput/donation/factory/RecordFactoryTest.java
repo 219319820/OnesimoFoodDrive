@@ -1,7 +1,7 @@
 package za.ac.cput.donation.factory;
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.donation.entity.Record;
+import za.ac.cput.donation.domain.Record;
 
 import static org.junit.jupiter.api.Assertions.*;
 

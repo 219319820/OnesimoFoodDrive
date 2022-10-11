@@ -1,7 +1,7 @@
-package za.ac.cput.donation.repositoty;
+package za.ac.cput.donation.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import za.ac.cput.donation.entity.ParcelRequest;
+import za.ac.cput.donation.domain.ParcelRequest;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package za.ac.cput.donation.factory;
 
-import za.ac.cput.donation.entity.Record;
+import za.ac.cput.donation.domain.Record;
 import za.ac.cput.donation.util.Helper;
 
 public class RecordFactory {

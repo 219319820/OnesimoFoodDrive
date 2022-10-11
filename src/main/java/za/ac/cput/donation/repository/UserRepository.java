@@ -1,8 +1,8 @@
-package za.ac.cput.donation.repositoty;
+package za.ac.cput.donation.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import za.ac.cput.donation.entity.User;
+import za.ac.cput.donation.domain.User;
 
 import java.util.Optional;
 

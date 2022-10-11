@@ -1,6 +1,6 @@
 package za.ac.cput.donation.factory;
 
-import za.ac.cput.donation.entity.Address;
+import za.ac.cput.donation.domain.Address;
 import za.ac.cput.donation.util.Helper;
 
 public class AddressFactory {

@@ -1,4 +1,4 @@
-package za.ac.cput.donation.entity;
+package za.ac.cput.donation.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
